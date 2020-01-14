@@ -1,0 +1,14 @@
+{
+  "welcomeFile": "/UI200114/index.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": [
+    {
+      "source": "^/UI200114/(.*)$",
+      "target": "$1",
+      "localDir": "webapp"
+    }
+  ]
+}

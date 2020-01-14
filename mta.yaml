@@ -1,0 +1,27 @@
+ID: Tutorial200114
+_schema-version: '2.1'
+version: 0.0.1
+modules:
+  - name: UI200114
+    type: html5
+    path: UI200114
+    parameters:
+      disk-quota: 512M
+      memory: 256M
+    build-parameters:
+      builder: grunt
+    requires:
+      - name: uaa_Tutorial200114
+      - name: dest_Tutorial200114
+resources:
+  - name: uaa_Tutorial200114
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+    type: org.cloudfoundry.managed-service
+  - name: dest_Tutorial200114
+    parameters:
+      service-plan: lite
+      service: destination
+    type: org.cloudfoundry.managed-service
